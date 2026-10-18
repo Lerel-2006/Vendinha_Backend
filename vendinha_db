@@ -1,0 +1,26 @@
+create table clientes (
+	id serial primary key,
+	nome varchar(50) not null,
+	cpf varchar(11) not null,
+	data_nascimento date not null,
+	email varchar(35)
+);
+
+create table dividas (
+	id serial primary key,
+	id_cliente int not null,
+	valor float not null,
+	paga boolean not null,
+	
+	constraint fk_divida_cliente
+		foreign key (id_cliente) references clientes (id)
+);
+
+insert into clientes (nome, cpf, data_nascimento, email)
+values ('Pedro Jorge Cardoso', '12345678901', '2005-04-15', 'pedrobatman@gmail.com'),
+('Josefina Santos', '11111111111', '1975-03-03', null);
+
+
+insert into dividas (id_cliente, valor, paga)
+values (1, 200.00, false),
+(1, 100.00, true);

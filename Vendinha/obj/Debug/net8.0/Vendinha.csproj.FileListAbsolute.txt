@@ -1,0 +1,16 @@
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha\bin\Debug\net8.0\Vendinha.exe
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha\bin\Debug\net8.0\Vendinha.deps.json
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha\bin\Debug\net8.0\Vendinha.runtimeconfig.json
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha\bin\Debug\net8.0\Vendinha.dll
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha\bin\Debug\net8.0\Vendinha.pdb
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha\obj\Debug\net8.0\Vendinha.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha\obj\Debug\net8.0\Vendinha.AssemblyInfoInputs.cache
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha\obj\Debug\net8.0\Vendinha.AssemblyInfo.cs
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha\obj\Debug\net8.0\Vendinha.csproj.CoreCompileInputs.cache
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha\obj\Debug\net8.0\Vendinha.sourcelink.json
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha\obj\Debug\net8.0\Vendinha.dll
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha\obj\Debug\net8.0\refint\Vendinha.dll
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha\obj\Debug\net8.0\Vendinha.pdb
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha\obj\Debug\net8.0\Vendinha.genruntimeconfig.cache
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha\obj\Debug\net8.0\ref\Vendinha.dll
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha\obj\Debug\net8.0\Vendinha.csproj.Up2Date

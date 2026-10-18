@@ -1,0 +1,35 @@
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\bin\Debug\net10.0\appsettings.Development.json
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\bin\Debug\net10.0\appsettings.json
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\bin\Debug\net10.0\Vendinha API.staticwebassets.endpoints.json
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\bin\Debug\net10.0\Vendinha API.exe
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\bin\Debug\net10.0\Vendinha API.deps.json
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\bin\Debug\net10.0\Vendinha API.runtimeconfig.json
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\bin\Debug\net10.0\Vendinha API.dll
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\bin\Debug\net10.0\Vendinha API.pdb
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\bin\Debug\net10.0\Microsoft.OpenApi.dll
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\obj\Debug\net10.0\Vendinha API.csproj.AssemblyReference.cache
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\obj\Debug\net10.0\Vendinha API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\obj\Debug\net10.0\Vendinha API.AssemblyInfoInputs.cache
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\obj\Debug\net10.0\Vendinha API.AssemblyInfo.cs
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\obj\Debug\net10.0\Vendinha API.csproj.CoreCompileInputs.cache
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\obj\Debug\net10.0\Vendinha API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\obj\Debug\net10.0\Vendinha API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\obj\Debug\net10.0\Vendinha API.sourcelink.json
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\obj\Debug\net10.0\rjimswa.dswa.cache.json
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\obj\Debug\net10.0\scopedcss\bundle\Vendinha API.styles.css
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\obj\Debug\net10.0\staticwebassets.build.json.cache
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\obj\Debug\net10.0\staticwebassets.development.json
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\obj\Debug\net10.0\staticwebassets.build.endpoints.json
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\obj\Debug\net10.0\swae.build.ex.cache
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\obj\Debug\net10.0\Vendinha.C7B99B75.Up2Date
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\obj\Debug\net10.0\Vendinha API.dll
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\obj\Debug\net10.0\refint\Vendinha API.dll
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\obj\Debug\net10.0\Vendinha API.pdb
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\obj\Debug\net10.0\Vendinha API.genruntimeconfig.cache
+C:\Users\leoho\source\repos\Vendinha_Backend\Vendinha API\obj\Debug\net10.0\ref\Vendinha API.dll

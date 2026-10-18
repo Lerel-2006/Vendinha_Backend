@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "dRn73JbM970=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Usuário\\source\\repos\\Vendinha API\\Vendinha API\\Vendinha API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.12\\microsoft.aspnetcore.openapi.10.0.12.nupkg.sha512",
+    "C:\\Users\\Usuário\\.nuget\\packages\\microsoft.openapi\\2.12.0\\microsoft.openapi.2.12.0.nupkg.sha512"
+  ],
+  "logs": []
+}

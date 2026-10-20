@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\leoho\\source\\repos\\Vendinha_Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B2553921-EEC8-4F73-B011-B98B76F3C8BC}|Vendas\\Vendas.csproj|c:\\users\\leoho\\source\\repos\\vendinha_backend\\vendas\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2553921-EEC8-4F73-B011-B98B76F3C8BC}|Vendas\\Vendas.csproj|solutionrelative:vendas\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C356CAD2-F9DF-4A75-AFFB-F8BF16C1A648}|Itens de Solu\u00E7\u00E3o{C356CAD2-F9DF-4A75-AFFB-F8BF16C1A648}|C:\\Users\\leoho\\source\\repos\\Vendinha_Backend\\.gitgnore||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{C356CAD2-F9DF-4A75-AFFB-F8BF16C1A648}|Itens de Solu\u00E7\u00E3o{C356CAD2-F9DF-4A75-AFFB-F8BF16C1A648}|solutionrelative:.gitgnore||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B2553921-EEC8-4F73-B011-B98B76F3C8BC}|Vendas\\Vendas.csproj|c:\\users\\leoho\\source\\repos\\vendinha_backend\\vendas\\models\\dividas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2553921-EEC8-4F73-B011-B98B76F3C8BC}|Vendas\\Vendas.csproj|solutionrelative:vendas\\models\\dividas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2553921-EEC8-4F73-B011-B98B76F3C8BC}|Vendas\\Vendas.csproj|c:\\users\\leoho\\source\\repos\\vendinha_backend\\vendas\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2553921-EEC8-4F73-B011-B98B76F3C8BC}|Vendas\\Vendas.csproj|solutionrelative:vendas\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2553921-EEC8-4F73-B011-B98B76F3C8BC}|Vendas\\Vendas.csproj|c:\\users\\leoho\\source\\repos\\vendinha_backend\\vendas\\vendas.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -21,6 +17,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{B2553921-EEC8-4F73-B011-B98B76F3C8BC}|Vendas\\Vendas.csproj|c:\\users\\leoho\\source\\repos\\vendinha_backend\\vendas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2553921-EEC8-4F73-B011-B98B76F3C8BC}|Vendas\\Vendas.csproj|solutionrelative:vendas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leoho\\source\\repos\\Vendinha_Backend\\.gitgnore||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitgnore||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,11 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Dividas.cs",
+              "DocumentMoniker": "C:\\Users\\leoho\\source\\repos\\Vendinha_Backend\\Vendas\\Models\\Dividas.cs",
+              "RelativeDocumentMoniker": "Vendas\\Models\\Dividas.cs",
+              "ToolTip": "C:\\Users\\leoho\\source\\repos\\Vendinha_Backend\\Vendas\\Models\\Dividas.cs",
+              "RelativeToolTip": "Vendas\\Models\\Dividas.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAUwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-18T21:24:56.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": ".gitgnore",
               "DocumentMoniker": "C:\\Users\\leoho\\source\\repos\\Vendinha_Backend\\.gitgnore",
               "RelativeDocumentMoniker": ".gitgnore",
@@ -42,72 +55,43 @@
               "RelativeToolTip": ".gitgnore",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-10-18T21:00:08.534Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "WhenOpened": "2026-10-18T21:00:08.534Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Dividas.cs",
-              "DocumentMoniker": "C:\\Users\\leoho\\source\\repos\\Vendinha_Backend\\Vendas\\Models\\Dividas.cs",
-              "RelativeDocumentMoniker": "Vendas\\Models\\Dividas.cs",
-              "ToolTip": "C:\\Users\\leoho\\source\\repos\\Vendinha_Backend\\Vendas\\Models\\Dividas.cs",
-              "RelativeToolTip": "Vendas\\Models\\Dividas.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-18T20:32:30.204Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Cliente.cs",
               "DocumentMoniker": "C:\\Users\\leoho\\source\\repos\\Vendinha_Backend\\Vendas\\Models\\Cliente.cs",
               "RelativeDocumentMoniker": "Vendas\\Models\\Cliente.cs",
               "ToolTip": "C:\\Users\\leoho\\source\\repos\\Vendinha_Backend\\Vendas\\Models\\Cliente.cs",
               "RelativeToolTip": "Vendas\\Models\\Cliente.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAQwBUAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA9wBEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-18T20:26:34.529Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-18T20:26:34.529Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Vendas",
+              "DocumentIndex": 2,
+              "Title": "Vendas.csproj",
               "DocumentMoniker": "C:\\Users\\leoho\\source\\repos\\Vendinha_Backend\\Vendas\\Vendas.csproj",
               "RelativeDocumentMoniker": "Vendas\\Vendas.csproj",
               "ToolTip": "C:\\Users\\leoho\\source\\repos\\Vendinha_Backend\\Vendas\\Vendas.csproj",
               "RelativeToolTip": "Vendas\\Vendas.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-10-18T20:24:54.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-18T20:24:54.572Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\leoho\\source\\repos\\Vendinha_Backend\\Vendas\\Program.cs",
               "RelativeDocumentMoniker": "Vendas\\Program.cs",
               "ToolTip": "C:\\Users\\leoho\\source\\repos\\Vendinha_Backend\\Vendas\\Program.cs",
               "RelativeToolTip": "Vendas\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-18T20:24:43.679Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-18T20:24:43.679Z"
             }
           ]
         }

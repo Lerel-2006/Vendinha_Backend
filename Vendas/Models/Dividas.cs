@@ -24,5 +24,28 @@ namespace Vendas.Models
         public DateTime? DataDePagamento { get; set; }
 
 
+        public Dividas(string nomeDaDivida, decimal valor, bool situacao, DateTime dataDeCriacao, DateTime? dataDePagamento)
+        {
+            NomeDaDivida = nomeDaDivida;
+            Valor = valor;
+            Situacao = situacao;
+            DataDeCriacao = dataDeCriacao;
+            DataDePagamento = dataDePagamento;
+        }
+
+        public virtual void PrintDados()
+        {
+            Console.WriteLine(Id);
+            Console.WriteLine(NomeDaDivida);
+            Console.WriteLine(Valor);
+            Console.WriteLine(Situacao);
+            Console.WriteLine(DataDeCriacao);
+            if (DataDePagamento.HasValue)
+            {
+                Console.WriteLine(DataDePagamento.Value);
+            }
+        }
+
+
     }
 }

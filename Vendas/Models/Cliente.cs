@@ -19,9 +19,47 @@ namespace Vendas.Models
 
         [Required(ErrorMessage = "Email é obrigatório.")]
         [EmailAddress(ErrorMessage = "Email inválido.")]
-        public string Email { get; set; }
+        public string Email
+        {
+            get { return this.Email; }
+            set
+            {
+                this.Email = value?.ToLower().Trim();
+            }
+        }
 
-        public int Idade =>
-            DateTime.Now.Year - DataNascimento.Year - (DateTime.Now.DayOfYear < DataNascimento.DayOfYear ? 1 : 0);
+        public int Idade
+        {
+            get
+            {
+                var hoje = DateTime.Today;
+                var idade = hoje.Year - DataNascimento.Year;
+                var hojeAnoNascimento = hoje.AddYears(-idade);
+
+                if(DataNascimento > hojeAnoNascimento)
+                {
+                    idade--;
+                }
+                return idade;
+
+            }
+        }
+        public Cliente(string nome, string cpf, DateTime dataNascimento, string email)
+        {
+            Nome = nome;
+            Cpf = cpf;
+            DataNascimento = dataNascimento;
+            Email = email;
+        }
+
+        public virtual void PrintDados()
+        {
+            Console.WriteLine(Id);
+            Console.WriteLine(Nome);
+            Console.WriteLine(Cpf);
+            Console.WriteLine(DataNascimento);
+            Console.WriteLine(Email);
+            Console.WriteLine(Idade);
+        }
     }
 }

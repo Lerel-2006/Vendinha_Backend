@@ -17,14 +17,14 @@ namespace Vendas.Models
         [Required(ErrorMessage = "Data de nascimento é obrigatória.")]
         public DateTime DataNascimento { get; set; }
 
-        [Required(ErrorMessage = "Email é obrigatório.")]
         [EmailAddress(ErrorMessage = "Email inválido.")]
+        private string email;
         public string Email
         {
-            get { return this.Email; }
+            get { return email; }
             set
             {
-                this.Email = value?.ToLower().Trim();
+                email = value?.ToLower().Trim();
             }
         }
 

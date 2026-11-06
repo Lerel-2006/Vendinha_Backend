@@ -24,3 +24,10 @@ values ('Pedro Jorge Cardoso', '12345678901', '2005-04-15', 'pedrobatman@gmail.c
 insert into dividas (id_cliente, valor, paga)
 values (1, 200.00, false),
 (1, 100.00, true);
+
+-- Alterações na tabela 
+alter table dividas
+	add column nome_divida VARCHAR(100) not null default 'Divida',
+	add column data_criacao TIMESTAMP not null default CURRENT_TIMESTAMP,
+	add column data_pagamento TIMESTAMP null;
+

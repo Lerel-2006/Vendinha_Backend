@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Vendas.Models
 {
-    public class Divida
+    public class Dividas
     {
 
         public int Id { get; set; }
@@ -25,7 +25,7 @@ namespace Vendas.Models
 
         public int IdCliente { get; set; }
 
-        public Divida(string nomeDaDivida, decimal valor, bool situacao, DateTime dataDeCriacao, DateTime? dataDePagamento)
+        public Dividas(string nomeDaDivida, decimal valor, bool situacao, DateTime dataDeCriacao, DateTime? dataDePagamento)
         {
             NomeDaDivida = nomeDaDivida;
             Valor = valor;

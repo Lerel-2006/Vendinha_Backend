@@ -47,7 +47,7 @@ namespace Vendas.Models
 
             }
         }
-        public Cliente(string nome, string cpf, DateTime dataNascimento, string? email)
+        public Cliente(string nome, string cpf, DateTime dataNascimento, string? email = null)
         {
             Nome = nome;
             Cpf = cpf;

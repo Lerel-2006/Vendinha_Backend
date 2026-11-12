@@ -68,6 +68,20 @@ namespace Vendas.Services
             return false;
         }
 
+        public bool DeletarCliente(int id)
+        {
+            var clienteExistente = ConsultarPorId(id);
+
+            if (clienteExistente != null)
+            {
+                _context.Clientes.Remove(clienteExistente);
+                _context.SaveChanges();
+                return true;
+            }
+
+            return false;
+        }
+
 
     }
 }

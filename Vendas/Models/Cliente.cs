@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace Vendas.Models
@@ -17,9 +18,10 @@ namespace Vendas.Models
         [Required(ErrorMessage = "Data de nascimento é obrigatória.")]
         public DateTime DataNascimento { get; set; }
 
+        private string? email;
+
         [EmailAddress(ErrorMessage = "Email inválido.")]
-        private string email;
-        public string Email
+        public string? Email
         {
             get { return email; }
             set
@@ -28,6 +30,7 @@ namespace Vendas.Models
             }
         }
 
+        [NotMapped]
         public int Idade
         {
             get
@@ -44,7 +47,7 @@ namespace Vendas.Models
 
             }
         }
-        public Cliente(string nome, string cpf, DateTime dataNascimento, string email)
+        public Cliente(string nome, string cpf, DateTime dataNascimento, string? email)
         {
             Nome = nome;
             Cpf = cpf;

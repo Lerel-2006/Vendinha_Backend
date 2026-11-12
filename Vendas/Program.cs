@@ -1,9 +1,12 @@
 ﻿using Vendas.Services;
+using Vendas.Contexts;
+using Vendas.Models;
 
-Conexao conexao = new Conexao();
+string connectionString = "Host=localhost;Port=5432;Database=vendinha;Username=postgres;Password=root123";
 
-using (var banco = conexao.Conectar())
+using (var context = new VendinhaDbContext(connectionString))
 {
-    banco.Open();
+    context.Database.CanConnect();
+
     Console.WriteLine("Funfou!!");
 }

@@ -102,7 +102,7 @@
             label4.Size = new Size(60, 21);
             label4.TabIndex = 6;
             label4.Text = "E-MAIL";
-            label4.Click += this.label4_Click;
+            
             // 
             // label5
             // 

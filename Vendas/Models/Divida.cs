@@ -23,6 +23,7 @@ namespace Vendas.Models
 
         public DateTime? DataDePagamento { get; set; }
 
+        [Required]
         public int IdCliente { get; set; }
 
         public Dividas(string nomeDaDivida, decimal valor, bool situacao, DateTime dataDeCriacao, DateTime? dataDePagamento)
@@ -46,6 +47,7 @@ namespace Vendas.Models
                 Console.WriteLine(DataDePagamento.Value);
             }
         }
+
 
 
     }

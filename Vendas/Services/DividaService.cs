@@ -4,17 +4,22 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using Vendas.Models;
-using Npgsql;
+using Vendas.Contexts;  
 
 namespace Vendas.Services
 {
     public class DividaService
     {
-        private readonly Conexao conexao = new Conexao();
+        private readonly VendinhaDbContext _context;
+
+        public DividaService(VendinhaDbContext context)
+        {
+            _context = context;
+        }
 
         public List<Dividas> Consultar()
         {
-            return dividas;
+            return _context.Dividas.ToList();
         }
 
         public bool Criar(Dividas divida)
@@ -34,40 +39,30 @@ namespace Vendas.Services
                 return false;
             }
 
-            using (var banco = conexao.Conectar())
+            bool clienteExiste = _context.Clientes.Any(c => c.Id == divida.IdCliente);
+
+            if (!clienteExiste)
             {
-                banco.Open();
-
-                string query = @"INSERT INTO dividas
-                (id_cliente, nome_divida, valor, paga, data_criacao, data_pagamento)
-                VALUES 
-                (@id_cliente, @nome_divida, @valor, @paga, @data_criacao, @data_pagamento)";
-
-
-                using (var comando = new NpgsqlCommand(query, banco))
-                {
-                    comando.Parameters.AddWithValue("@id_cliente", divida.IdCliente);
-                    comando.Parameters.AddWithValue("@nome_divida", divida.NomeDaDivida);
-                    comando.Parameters.AddWithValue("@valor", divida.Valor);
-                    comando.Parameters.AddWithValue("@paga", divida.Situacao);
-                    comando.Parameters.AddWithValue("@data_criacao", divida.DataDeCriacao);
-                    comando.Parameters.AddWithValue("@data_pagamento", (object?)divida.DataDePagamento ?? DBNull.Value);
-                    comando.ExecuteNonQuery();
-                }
-                return true;
+                return false;
             }
+
+            _context.Dividas.Add(divida);
+            _context.SaveChanges();
+            return true;
         }
+
+        
 
         public List<Dividas> ConsultarPorCliente(int idCliente)
         {
-            return dividas
+            return _context.Dividas
                 .Where(d => d.IdCliente == idCliente)
                 .ToList();
         }
 
         public Dividas? ConsultarPorId(int id)
         {
-            return dividas.FirstOrDefault(d => d.Id == id);
+            return _context.Dividas.FirstOrDefault(d => d.Id == id);
         }
 
         public bool RegistrarPagamento(int id)
@@ -81,6 +76,7 @@ namespace Vendas.Services
 
             divida.Situacao = true;
             divida.DataDePagamento = DateTime.Now;
+            _context.SaveChanges();
 
             return true;
         }

@@ -39,6 +39,7 @@
             label6 = new Label();
             Confirmar = new Button();
             Limpar = new Button();
+            Sair = new Button();
             Valor = new TextBox();
             SuspendLayout();
             // 
@@ -148,11 +149,21 @@
             Limpar.Text = "Limpar";
             Limpar.UseVisualStyleBackColor = true;
             // 
+            // Sair
+            // 
+            Sair.Location = new Point(696, 434);
+            Sair.Name = "Sair";
+            Sair.Size = new Size(104, 39);
+            Sair.TabIndex = 17;
+            Sair.Text = "Sair";
+            Sair.UseVisualStyleBackColor = true;
+            // 
             // CadastrarDividas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(924, 521);
+            Controls.Add(Sair);
             Controls.Add(Limpar);
             Controls.Add(Confirmar);
             Controls.Add(pickerData);
@@ -183,5 +194,6 @@
         private Label label6;
         private Button Confirmar;
         private Button Limpar;
+        private Button Sair;
     }
 }

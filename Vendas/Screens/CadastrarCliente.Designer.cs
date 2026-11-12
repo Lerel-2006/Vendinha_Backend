@@ -30,15 +30,16 @@
         {
             label2 = new Label();
             label1 = new Label();
-            Nome = new TextBox();
+            textBox1 = new TextBox();
             label3 = new Label();
-            CPF = new TextBox();
-            Email = new TextBox();
+            textBox2 = new TextBox();
+            textBox3 = new TextBox();
             label4 = new Label();
             label5 = new Label();
             pickerData = new DateTimePicker();
             Confirmar = new Button();
             Limpar = new Button();
+            sair = new Button();
             SuspendLayout();
             // 
             // label2
@@ -57,16 +58,16 @@
             label1.Font = new Font("Segoe UI", 12F);
             label1.Location = new Point(12, 80);
             label1.Name = "label1";
-            label1.Size = new Size(56, 21);
+            label1.Size = new Size(53, 21);
             label1.TabIndex = 2;
-            label1.Text = "Nome:";
+            label1.Text = "Nome";
             // 
-            // Nome
+            // textBox1
             // 
-            Nome.Location = new Point(12, 104);
-            Nome.Name = "Nome";
-            Nome.Size = new Size(376, 23);
-            Nome.TabIndex = 3;
+            textBox1.Location = new Point(12, 104);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(376, 23);
+            textBox1.TabIndex = 3;
             // 
             // label3
             // 
@@ -74,24 +75,24 @@
             label3.Font = new Font("Segoe UI", 12F);
             label3.Location = new Point(12, 144);
             label3.Name = "label3";
-            label3.Size = new Size(40, 21);
+            label3.Size = new Size(37, 21);
             label3.TabIndex = 4;
-            label3.Text = "CPF:";
+            label3.Text = "CPF";
             // 
-            // CPF
+            // textBox2
             // 
-            CPF.Location = new Point(12, 168);
-            CPF.Name = "CPF";
-            CPF.Size = new Size(376, 23);
-            CPF.TabIndex = 5;
+            textBox2.Location = new Point(12, 168);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(376, 23);
+            textBox2.TabIndex = 5;
             // 
-            // Email
+            // textBox3
             // 
-            Email.Location = new Point(12, 239);
-            Email.Name = "Email";
-            Email.Size = new Size(376, 23);
-            Email.TabIndex = 7;
-            Email.TextChanged += textBox3_TextChanged;
+            textBox3.Location = new Point(12, 239);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(376, 23);
+            textBox3.TabIndex = 7;
+            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // label4
             // 
@@ -141,20 +142,30 @@
             Limpar.Text = "Limpar";
             Limpar.UseVisualStyleBackColor = true;
             // 
+            // sair
+            // 
+            sair.Location = new Point(689, 395);
+            sair.Name = "sair";
+            sair.Size = new Size(99, 31);
+            sair.TabIndex = 12;
+            sair.Text = "Sair";
+            sair.UseVisualStyleBackColor = true;
+            // 
             // CadastrarCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(923, 517);
+            Controls.Add(sair);
             Controls.Add(Limpar);
             Controls.Add(Confirmar);
             Controls.Add(pickerData);
             Controls.Add(label5);
-            Controls.Add(Email);
+            Controls.Add(textBox3);
             Controls.Add(label4);
-            Controls.Add(CPF);
+            Controls.Add(textBox2);
             Controls.Add(label3);
-            Controls.Add(Nome);
+            Controls.Add(textBox1);
             Controls.Add(label1);
             Controls.Add(label2);
             Name = "CadastrarCliente";
@@ -167,14 +178,15 @@
 
         private Label label2;
         private Label label1;
-        private TextBox Nome;
+        private TextBox textBox1;
         private Label label3;
-        private TextBox CPF;
-        private TextBox Email;
+        private TextBox textBox2;
+        private TextBox textBox3;
         private Label label4;
         private Label label5;
         private DateTimePicker pickerData;
         private Button Confirmar;
         private Button Limpar;
+        private Button sair;
     }
 }

@@ -37,11 +37,11 @@
             // 
             // Atualizar
             // 
-            Atualizar.Location = new Point(322, 233);
+            Atualizar.Location = new Point(727, 233);
             Atualizar.Name = "Atualizar";
             Atualizar.Size = new Size(121, 45);
             Atualizar.TabIndex = 0;
-            Atualizar.Text = "Atualizar Dívida";
+            Atualizar.Text = "Atualizar";
             Atualizar.UseVisualStyleBackColor = true;
             // 
             // CadastrarCliente
@@ -76,7 +76,7 @@
             // 
             // CadastrarDividas
             // 
-            CadastrarDividas.Location = new Point(731, 233);
+            CadastrarDividas.Location = new Point(324, 233);
             CadastrarDividas.Name = "CadastrarDividas";
             CadastrarDividas.Size = new Size(121, 45);
             CadastrarDividas.TabIndex = 5;

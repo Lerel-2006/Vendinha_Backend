@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="Vendas/Vendas.csproj" Id="b2553921-eec8-4f73-b011-b98b76f3c8bc" />
+  <Project Path="Vendinha.Desktop/Vendinha.Desktop.csproj" Id="8030611f-a628-43c2-b382-b7f435bcf970" />
 </Solution>

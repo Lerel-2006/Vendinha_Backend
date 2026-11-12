@@ -8,4 +8,28 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Screens\Atualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Screens\AtualizarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Screens\AtualizarDivida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Screens\CadastrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Screens\CadastrarDividas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Screens\ConsultarExcluir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>

@@ -7,3 +7,7 @@
 [Oo]bj/
 TestResults/
 *.trx
+# Formulários antigos
+/Forms1/
+/Form1.cs
+/Form1.Designer.cs

@@ -29,14 +29,6 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            textBox1 = new TextBox();
-            Excluir = new Button();
-            Sair = new Button();
-            txtPesquisa = new TextBox();
-            button1 = new Button();
             ID = new DataGridViewTextBoxColumn();
             Nome = new DataGridViewTextBoxColumn();
             CPF = new DataGridViewTextBoxColumn();
@@ -47,6 +39,11 @@
             DataCriacao = new DataGridViewTextBoxColumn();
             DataPagamento = new DataGridViewTextBoxColumn();
             Situacao = new DataGridViewTextBoxColumn();
+            label1 = new Label();
+            Excluir = new Button();
+            Sair = new Button();
+            txtPesquisa = new TextBox();
+            button1 = new Button();
             Anterior = new Button();
             Proximo = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -66,79 +63,6 @@
             dataGridView1.Size = new Size(946, 313);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 25F);
-            label1.Location = new Point(250, -4);
-            label1.Name = "label1";
-            label1.Size = new Size(384, 46);
-            label1.TabIndex = 1;
-            label1.Text = "CONSULTA DE CLIENTES";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 28F);
-            label2.Location = new Point(349, 435);
-            label2.Name = "label2";
-            label2.Size = new Size(163, 51);
-            label2.TabIndex = 2;
-            label2.Text = "EXCLUIR";
-            label2.Click += label2_Click;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(324, 512);
-            label3.Name = "label3";
-            label3.Size = new Size(241, 15);
-            label3.TabIndex = 3;
-            label3.Text = "Digite o ID do cliente que você deseja Excluir";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(324, 539);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(238, 23);
-            textBox1.TabIndex = 4;
-            // 
-            // Excluir
-            // 
-            Excluir.Location = new Point(383, 584);
-            Excluir.Name = "Excluir";
-            Excluir.Size = new Size(85, 32);
-            Excluir.TabIndex = 5;
-            Excluir.Text = "Excluir";
-            Excluir.UseVisualStyleBackColor = true;
-            // 
-            // Sair
-            // 
-            Sair.Location = new Point(12, 12);
-            Sair.Name = "Sair";
-            Sair.Size = new Size(92, 49);
-            Sair.TabIndex = 6;
-            Sair.Text = "Sair";
-            Sair.UseVisualStyleBackColor = true;
-            // 
-            // txtPesquisa
-            // 
-            txtPesquisa.Location = new Point(453, 66);
-            txtPesquisa.Margin = new Padding(3, 2, 3, 2);
-            txtPesquisa.Name = "txtPesquisa";
-            txtPesquisa.Size = new Size(290, 23);
-            txtPesquisa.TabIndex = 8;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(748, 64);
-            button1.Margin = new Padding(3, 2, 3, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(82, 22);
-            button1.TabIndex = 7;
-            button1.Text = "Buscar";
-            button1.UseVisualStyleBackColor = true;
             // 
             // ID
             // 
@@ -200,6 +124,52 @@
             Situacao.Name = "Situacao";
             Situacao.ReadOnly = true;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 25F);
+            label1.Location = new Point(250, -4);
+            label1.Name = "label1";
+            label1.Size = new Size(384, 46);
+            label1.TabIndex = 1;
+            label1.Text = "CONSULTA DE CLIENTES";
+            // 
+            // Excluir
+            // 
+            Excluir.Location = new Point(414, 471);
+            Excluir.Name = "Excluir";
+            Excluir.Size = new Size(85, 32);
+            Excluir.TabIndex = 5;
+            Excluir.Text = "Excluir";
+            Excluir.UseVisualStyleBackColor = true;
+            // 
+            // Sair
+            // 
+            Sair.Location = new Point(12, 12);
+            Sair.Name = "Sair";
+            Sair.Size = new Size(92, 49);
+            Sair.TabIndex = 6;
+            Sair.Text = "Sair";
+            Sair.UseVisualStyleBackColor = true;
+            // 
+            // txtPesquisa
+            // 
+            txtPesquisa.Location = new Point(453, 66);
+            txtPesquisa.Margin = new Padding(3, 2, 3, 2);
+            txtPesquisa.Name = "txtPesquisa";
+            txtPesquisa.Size = new Size(290, 23);
+            txtPesquisa.TabIndex = 8;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(748, 64);
+            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(82, 22);
+            button1.TabIndex = 7;
+            button1.Text = "Buscar";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // Anterior
             // 
             Anterior.Location = new Point(-3, 423);
@@ -211,7 +181,7 @@
             // 
             // Proximo
             // 
-            Proximo.Location = new Point(855, 423);
+            Proximo.Location = new Point(855, 424);
             Proximo.Name = "Proximo";
             Proximo.Size = new Size(75, 23);
             Proximo.TabIndex = 10;
@@ -229,9 +199,6 @@
             Controls.Add(button1);
             Controls.Add(Sair);
             Controls.Add(Excluir);
-            Controls.Add(textBox1);
-            Controls.Add(label3);
-            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(dataGridView1);
             Name = "ConsultarExcluir";
@@ -249,9 +216,6 @@
         private DataGridViewTextBoxColumn DataNascimento;
         private DataGridViewTextBoxColumn Email;
         private Label label1;
-        private Label label2;
-        private Label label3;
-        private TextBox textBox1;
         private Button Excluir;
         private Button Sair;
         private TextBox txtPesquisa;

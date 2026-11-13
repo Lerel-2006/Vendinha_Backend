@@ -50,16 +50,29 @@ namespace Vendas.Services
         {
             return _context.Clientes.ToList();
         }
+
+        public List<Cliente> Consultar(string nome)
+        {
+            if (string.IsNullOrWhiteSpace(nome))
+            {
+                return Consultar();
+            }
+
+            return _context.Clientes
+                .Where(c => c.Nome.ToLower().Contains(nome.Trim().ToLower()))
+                .ToList();
+        }
+
         public Cliente? ConsultarPorNome(string nome)
         {
             return _context.Clientes.FirstOrDefault(c =>
                 c.Nome.ToLower() == nome.Trim().ToLower());
         }
+
         public Cliente? ConsultarPorId(int id)
         {
             return _context.Clientes.FirstOrDefault(c => c.Id == id);
         }
-
         public bool AtualizarCliente(Cliente cliente)
         {
             var clienteExistente = ConsultarPorId(cliente.Id);

@@ -22,7 +22,7 @@ namespace Vendas.Services
             return _context.Dividas.ToList();
         }
 
-        public bool Criar(Dividas divida)
+        public bool AdicionarDivida(Dividas divida)
         {
             var contexto = new ValidationContext(divida);
             var resultados = new List<ValidationResult>();

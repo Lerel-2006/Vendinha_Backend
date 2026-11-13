@@ -75,6 +75,12 @@ namespace Vendas.Services
         }
         public bool AtualizarCliente(Cliente cliente)
         {
+            bool valido = Validator.TryValidateObject(cliente, new ValidationContext(cliente), new List<ValidationResult>(), true);
+            if (!valido)
+            {
+                return false;
+            }
+
             var clienteExistente = ConsultarPorId(cliente.Id);
             if (clienteExistente != null)
             {

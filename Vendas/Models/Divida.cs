@@ -26,7 +26,7 @@ namespace Vendas.Models
         [Required]
         public int IdCliente { get; set; }
 
-        public Dividas(string nomeDaDivida, decimal valor, bool situacao, DateTime dataDeCriacao, DateTime? dataDePagamento)
+        public Dividas(string nomeDaDivida, decimal valor, bool situacao, DateTime dataDeCriacao, DateTime? dataDePagamento = null)
         {
             NomeDaDivida = nomeDaDivida;
             Valor = valor;
@@ -37,14 +37,14 @@ namespace Vendas.Models
 
         public virtual void PrintDados()
         {
-            Console.WriteLine(Id);
-            Console.WriteLine(NomeDaDivida);
-            Console.WriteLine(Valor);
-            Console.WriteLine(Situacao);
-            Console.WriteLine(DataDeCriacao);
+            Console.WriteLine($"Id: {Id}");
+            Console.WriteLine($"Nome da Dívida: {NomeDaDivida}");
+            Console.WriteLine($"Valor: {Valor}");
+            Console.WriteLine($"Situação: {Situacao}");
+            Console.WriteLine($"Data de Criação: {DataDeCriacao}");
             if (DataDePagamento.HasValue)
             {
-                Console.WriteLine(DataDePagamento.Value);
+                Console.WriteLine($"Data de Pagamento: {DataDePagamento.Value}");
             }
         }
 

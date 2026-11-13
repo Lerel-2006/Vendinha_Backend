@@ -1,4 +1,4 @@
-﻿namespace Vendas.Screens
+﻿namespace Vendinha.Desktop.Screens
 {
     partial class AtualizarDivida
     {

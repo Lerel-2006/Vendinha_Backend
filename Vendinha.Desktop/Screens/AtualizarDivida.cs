@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Vendas.Screens
+namespace Vendinha.Desktop.Screens
 {
     public partial class AtualizarDivida : Form
     {

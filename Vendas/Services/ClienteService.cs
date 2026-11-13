@@ -50,7 +50,11 @@ namespace Vendas.Services
         {
             return _context.Clientes.ToList();
         }
-
+        public Cliente? ConsultarPorNome(string nome)
+        {
+            return _context.Clientes.FirstOrDefault(c =>
+                c.Nome.ToLower() == nome.Trim().ToLower());
+        }
         public Cliente? ConsultarPorId(int id)
         {
             return _context.Clientes.FirstOrDefault(c => c.Id == id);

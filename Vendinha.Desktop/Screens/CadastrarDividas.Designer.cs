@@ -1,4 +1,4 @@
-﻿namespace Vendas.Screens
+﻿namespace Vendinha.Desktop.Screens
 {
     partial class CadastrarDividas
     {
@@ -81,6 +81,7 @@
             NomeCliente.Name = "NomeCliente";
             NomeCliente.Size = new Size(276, 23);
             NomeCliente.TabIndex = 2;
+            NomeCliente.TextChanged += NomeCliente_TextChanged;
             // 
             // NomeDivida
             // 
@@ -118,7 +119,6 @@
             pickerData.Name = "pickerData";
             pickerData.Size = new Size(269, 23);
             pickerData.TabIndex = 12;
-            pickerData.ValueChanged += this.pickerData_ValueChanged;
             // 
             // label6
             // 
@@ -129,7 +129,6 @@
             label6.Size = new Size(119, 21);
             label6.TabIndex = 11;
             label6.Text = "Data de Criação";
-            label6.Click += this.label6_Click;
             // 
             // Confirmar
             // 

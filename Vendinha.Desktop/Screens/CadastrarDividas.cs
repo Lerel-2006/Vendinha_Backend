@@ -1,17 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
+﻿using Vendas.Services;
 
-namespace Vendas.Screens
+namespace Vendinha.Desktop.Screens
 {
     public partial class CadastrarDividas : Form
     {
-        public CadastrarDividas()
+        private readonly ClienteService clienteService;
+        private readonly DividaService dividaService;
+
+        public CadastrarDividas(
+            ClienteService clienteService,
+            DividaService dividaService)
         {
+            this.clienteService = clienteService;
+            this.dividaService = dividaService;
+
             InitializeComponent();
         }
 
@@ -41,6 +43,11 @@ namespace Vendas.Screens
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NomeCliente_TextChanged(object sender, EventArgs e)
         {
 
         }

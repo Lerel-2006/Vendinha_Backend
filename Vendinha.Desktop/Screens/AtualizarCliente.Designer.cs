@@ -1,4 +1,4 @@
-﻿namespace Vendas.Screens
+﻿namespace Vendinha.Desktop.Screens
 {
     partial class AtualizarCliente
     {
@@ -30,16 +30,16 @@
         {
             Voltar = new Button();
             Confirmar = new Button();
-            pickerData = new DateTimePicker();
+            DataBox = new DateTimePicker();
             label5 = new Label();
-            Email = new TextBox();
+            EmailBox = new TextBox();
             label4 = new Label();
-            CPF = new TextBox();
+            CPFBox = new TextBox();
             label3 = new Label();
-            Nome = new TextBox();
+            NomeBox = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
+            IdBox = new TextBox();
             label6 = new Label();
             SuspendLayout();
             // 
@@ -51,6 +51,8 @@
             Voltar.TabIndex = 22;
             Voltar.Text = "Voltar";
             Voltar.UseVisualStyleBackColor = true;
+            Voltar.Click += Voltar_Click;
+
             // 
             // Confirmar
             // 
@@ -60,15 +62,17 @@
             Confirmar.TabIndex = 21;
             Confirmar.Text = "Atualizar";
             Confirmar.UseVisualStyleBackColor = true;
+            Confirmar.Click += Confirmar_Click;
+            
             // 
-            // pickerData
+            // DataBox
             // 
-            pickerData.Format = DateTimePickerFormat.Short;
-            pickerData.Location = new Point(12, 335);
-            pickerData.Margin = new Padding(2);
-            pickerData.Name = "pickerData";
-            pickerData.Size = new Size(376, 23);
-            pickerData.TabIndex = 20;
+            DataBox.Format = DateTimePickerFormat.Short;
+            DataBox.Location = new Point(12, 335);
+            DataBox.Margin = new Padding(2);
+            DataBox.Name = "DataBox";
+            DataBox.Size = new Size(376, 23);
+            DataBox.TabIndex = 20;
             // 
             // label5
             // 
@@ -80,12 +84,12 @@
             label5.TabIndex = 19;
             label5.Text = "Data de Nascimento";
             // 
-            // Email
+            // EmailBox
             // 
-            Email.Location = new Point(12, 270);
-            Email.Name = "Email";
-            Email.Size = new Size(376, 23);
-            Email.TabIndex = 18;
+            EmailBox.Location = new Point(12, 270);
+            EmailBox.Name = "EmailBox";
+            EmailBox.Size = new Size(376, 23);
+            EmailBox.TabIndex = 18;
             // 
             // label4
             // 
@@ -97,12 +101,12 @@
             label4.TabIndex = 17;
             label4.Text = "E-MAIL";
             // 
-            // CPF
+            // CPFBox
             // 
-            CPF.Location = new Point(12, 199);
-            CPF.Name = "CPF";
-            CPF.Size = new Size(376, 23);
-            CPF.TabIndex = 16;
+            CPFBox.Location = new Point(12, 199);
+            CPFBox.Name = "CPFBox";
+            CPFBox.Size = new Size(376, 23);
+            CPFBox.TabIndex = 16;
             // 
             // label3
             // 
@@ -114,12 +118,13 @@
             label3.TabIndex = 15;
             label3.Text = "CPF";
             // 
-            // Nome
+            // NomeBox
             // 
-            Nome.Location = new Point(12, 135);
-            Nome.Name = "Nome";
-            Nome.Size = new Size(376, 23);
-            Nome.TabIndex = 14;
+            NomeBox.Location = new Point(12, 135);
+            NomeBox.Name = "NomeBox";
+            NomeBox.Size = new Size(376, 23);
+            NomeBox.TabIndex = 14;
+            NomeBox.TextChanged += NomeBox_TextChanged;
             // 
             // label1
             // 
@@ -130,7 +135,6 @@
             label1.Size = new Size(53, 21);
             label1.TabIndex = 13;
             label1.Text = "Nome";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -142,12 +146,14 @@
             label2.TabIndex = 12;
             label2.Text = "Atualizar Cliente";
             // 
-            // textBox1
+            // IdBox
             // 
-            textBox1.Location = new Point(12, 90);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(376, 23);
-            textBox1.TabIndex = 24;
+            IdBox.Location = new Point(12, 90);
+            IdBox.Name = "IdBox";
+            IdBox.Size = new Size(376, 23);
+            IdBox.TabIndex = 24;
+            IdBox.TextChanged += IdBox_TextChanged;
+
             // 
             // label6
             // 
@@ -164,17 +170,17 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(930, 527);
-            Controls.Add(textBox1);
+            Controls.Add(IdBox);
             Controls.Add(label6);
             Controls.Add(Voltar);
             Controls.Add(Confirmar);
-            Controls.Add(pickerData);
+            Controls.Add(DataBox);
             Controls.Add(label5);
-            Controls.Add(Email);
+            Controls.Add(EmailBox);
             Controls.Add(label4);
-            Controls.Add(CPF);
+            Controls.Add(CPFBox);
             Controls.Add(label3);
-            Controls.Add(Nome);
+            Controls.Add(NomeBox);
             Controls.Add(label1);
             Controls.Add(label2);
             Name = "AtualizarCliente";
@@ -187,16 +193,16 @@
 
         private Button Voltar;
         private Button Confirmar;
-        private DateTimePicker pickerData;
+        private DateTimePicker DataBox;
         private Label label5;
-        private TextBox Email;
+        private TextBox EmailBox;
         private Label label4;
-        private TextBox CPF;
+        private TextBox CPFBox;
         private Label label3;
-        private TextBox Nome;
+        private TextBox NomeBox;
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox IdBox;
         private Label label6;
     }
 }

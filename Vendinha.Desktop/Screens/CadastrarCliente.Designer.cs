@@ -1,4 +1,5 @@
-﻿namespace Forms1
+﻿namespace Vendinha.Desktop.Screens
+
 {
     partial class CadastrarCliente
     {
@@ -30,13 +31,13 @@
         {
             label2 = new Label();
             label1 = new Label();
-            textBox1 = new TextBox();
+            nomeBox = new TextBox();
             label3 = new Label();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            CpfBox = new TextBox();
+            EmailBox = new TextBox();
             label4 = new Label();
             label5 = new Label();
-            pickerData = new DateTimePicker();
+            DataBox = new DateTimePicker();
             Confirmar = new Button();
             Limpar = new Button();
             sair = new Button();
@@ -62,12 +63,12 @@
             label1.TabIndex = 2;
             label1.Text = "Nome";
             // 
-            // textBox1
+            // nomeBox
             // 
-            textBox1.Location = new Point(12, 104);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(376, 23);
-            textBox1.TabIndex = 3;
+            nomeBox.Location = new Point(12, 104);
+            nomeBox.Name = "nomeBox1";
+            nomeBox.Size = new Size(376, 23);
+            nomeBox.TabIndex = 3;
             // 
             // label3
             // 
@@ -79,20 +80,19 @@
             label3.TabIndex = 4;
             label3.Text = "CPF";
             // 
-            // textBox2
+            // CpfBox
             // 
-            textBox2.Location = new Point(12, 168);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(376, 23);
-            textBox2.TabIndex = 5;
+            CpfBox.Location = new Point(12, 168);
+            CpfBox.Name = "CpfBox";
+            CpfBox.Size = new Size(376, 23);
+            CpfBox.TabIndex = 5;
             // 
-            // textBox3
+            // EmailBox
             // 
-            textBox3.Location = new Point(12, 239);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(376, 23);
-            textBox3.TabIndex = 7;
-            textBox3.TextChanged += textBox3_TextChanged;
+            EmailBox.Location = new Point(12, 239);
+            EmailBox.Name = "EmailBox";
+            EmailBox.Size = new Size(376, 23);
+            EmailBox.TabIndex = 7;
             // 
             // label4
             // 
@@ -113,16 +113,15 @@
             label5.Size = new Size(150, 21);
             label5.TabIndex = 8;
             label5.Text = "Data de Nascimento";
-            label5.Click += label5_Click;
             // 
-            // pickerData
+            // DataBox
             // 
-            pickerData.Format = DateTimePickerFormat.Short;
-            pickerData.Location = new Point(12, 304);
-            pickerData.Margin = new Padding(2);
-            pickerData.Name = "pickerData";
-            pickerData.Size = new Size(376, 23);
-            pickerData.TabIndex = 9;
+            DataBox.Format = DateTimePickerFormat.Short;
+            DataBox.Location = new Point(12, 304);
+            DataBox.Margin = new Padding(2);
+            DataBox.Name = "DataBox";
+            DataBox.Size = new Size(376, 23);
+            DataBox.TabIndex = 9;
             // 
             // Confirmar
             // 
@@ -132,6 +131,8 @@
             Confirmar.TabIndex = 10;
             Confirmar.Text = "Cadastrar";
             Confirmar.UseVisualStyleBackColor = true;
+            Confirmar.Click += btnCadastrar_Click;
+            
             // 
             // Limpar
             // 
@@ -141,6 +142,8 @@
             Limpar.TabIndex = 11;
             Limpar.Text = "Limpar";
             Limpar.UseVisualStyleBackColor = true;
+            Limpar.Click += btnLimpar_Click;
+            
             // 
             // sair
             // 
@@ -150,6 +153,7 @@
             sair.TabIndex = 12;
             sair.Text = "Sair";
             sair.UseVisualStyleBackColor = true;
+            sair.Click += btnSair_Click;
             // 
             // CadastrarCliente
             // 
@@ -159,13 +163,13 @@
             Controls.Add(sair);
             Controls.Add(Limpar);
             Controls.Add(Confirmar);
-            Controls.Add(pickerData);
+            Controls.Add(DataBox);
             Controls.Add(label5);
-            Controls.Add(textBox3);
+            Controls.Add(EmailBox);
             Controls.Add(label4);
-            Controls.Add(textBox2);
+            Controls.Add(CpfBox);
             Controls.Add(label3);
-            Controls.Add(textBox1);
+            Controls.Add(nomeBox);
             Controls.Add(label1);
             Controls.Add(label2);
             Name = "CadastrarCliente";
@@ -178,13 +182,13 @@
 
         private Label label2;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox nomeBox;
         private Label label3;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox CpfBox;
+        private TextBox EmailBox;
         private Label label4;
         private Label label5;
-        private DateTimePicker pickerData;
+        private DateTimePicker DataBox;
         private Button Confirmar;
         private Button Limpar;
         private Button sair;

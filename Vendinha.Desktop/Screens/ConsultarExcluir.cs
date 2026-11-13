@@ -5,13 +5,20 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using Vendas.Services;
 
-namespace Vendas.Screens
+namespace Vendinha.Desktop.Screens
 {
     public partial class ConsultarExcluir : Form
     {
-        public ConsultarExcluir()
+        private readonly ClienteService clienteService;
+        private readonly DividaService dividaService;
+
+        public ConsultarExcluir(ClienteService clienteService, DividaService dividaService)
         {
+            this.clienteService = clienteService;
+            this.dividaService = dividaService;
+
             InitializeComponent();
         }
 
@@ -21,6 +28,11 @@ namespace Vendas.Screens
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

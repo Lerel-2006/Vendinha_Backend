@@ -1,22 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
+﻿using Vendas.Services;
 
-namespace Vendas.Screens
+namespace Vendinha.Desktop.Screens
 {
     public partial class Atualizar : Form
     {
-        public Atualizar()
+        private readonly ClienteService clienteService;
+        private readonly DividaService dividaService;
+
+        public Atualizar(ClienteService clienteService, DividaService dividaService)
         {
+            this.clienteService = clienteService;
+            this.dividaService = dividaService;
+
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AtualizarCliente tela = new AtualizarCliente(clienteService);
+            tela.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-                    }
+        }
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace Forms1
+﻿namespace Vendinha.Desktop
 {
-    partial class Form1
+partial class Form1
     {
         /// <summary>
         ///  Required designer variable.
@@ -19,6 +19,7 @@
             }
             base.Dispose(disposing);
         }
+
 
         #region Windows Form Designer generated code
 
@@ -43,6 +44,7 @@
             Atualizar.TabIndex = 0;
             Atualizar.Text = "Atualizar";
             Atualizar.UseVisualStyleBackColor = true;
+            Atualizar.Click += button3_Click;
             // 
             // CadastrarCliente
             // 

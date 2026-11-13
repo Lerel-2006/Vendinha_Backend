@@ -9,18 +9,19 @@ namespace Vendas.Models
     public class Cliente
     {
         public int Id { get; set; }
-        [Required(ErrorMessage = "Nome é obrigatório.")]
-        [StringLength(50, ErrorMessage = "Nome deve ter no máximo 50 caracteres.")]
+        [Required]
+        [StringLength(50)]
         public string Nome { get; set; }
-        [Required(ErrorMessage = "CPF é obrigatório.")]
+        [Required]
+        [StringLength(11, MinimumLength = 11)]
         public string Cpf { get; set; }
 
-        [Required(ErrorMessage = "Data de nascimento é obrigatória.")]
+        [Required]
         public DateTime DataNascimento { get; set; }
 
         private string? email;
 
-        [EmailAddress(ErrorMessage = "Email inválido.")]
+        [EmailAddress]
         public string? Email
         {
             get { return email; }

@@ -46,6 +46,17 @@ namespace Vendas.Services
                 return false;
             }
 
+            bool dividaAberta = _context.Dividas
+                .Any(d => d.IdCliente == divida.IdCliente && !d.Situacao);
+
+            if (dividaAberta && !divida.Situacao)
+            {
+                Console.WriteLine("Este cliente já possui uma divida em aberto");
+                return false;
+            }
+
+            
+
             _context.Dividas.Add(divida);
             _context.SaveChanges();
             return true;

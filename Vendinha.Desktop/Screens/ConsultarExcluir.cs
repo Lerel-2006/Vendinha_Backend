@@ -1,4 +1,5 @@
-﻿using Vendas.Models;
+﻿
+using Vendas.Models;
 using Vendas.Services;
 
 namespace Vendinha.Desktop.Screens
@@ -8,7 +9,8 @@ namespace Vendinha.Desktop.Screens
         private readonly ClienteService clienteService;
         private readonly DividaService dividaService;
 
-        private List<Cliente> clientes = new List<Cliente>();
+        private List<Dividas> dividas = new List<Dividas>();
+
         private int paginaAtual = 0;
         private int quantidadePorPagina = 10;
 
@@ -33,85 +35,57 @@ namespace Vendinha.Desktop.Screens
 
         private void CarregarDados()
         {
-            clientes = clienteService.Consultar();
             paginaAtual = 0;
 
-            CarregarDadosTabela(clientes);
+            dividas = dividaService.ConsultarNClientes();
+
+            CarregarDividas();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void CarregarDividas()
         {
-            var resultado = clienteService.Consultar(txtPesquisa.Text);
-
-            paginaAtual = 0;
-            CarregarDadosTabela(resultado);
-        }
-
-        private void CarregarDadosTabela(List<Cliente> lista)
-        {
-            clientes = lista;
-
             dataGridView1.Rows.Clear();
 
             int inicio = paginaAtual * quantidadePorPagina;
 
-            var clientesPagina = clientes
+            var dividasPagina = dividas
                 .Skip(inicio)
                 .Take(quantidadePorPagina)
                 .ToList();
 
-            foreach (var cliente in clientesPagina)
+            foreach (var divida in dividasPagina)
             {
-                var dividas = dividaService.ConsultarPorCliente(cliente.Id);
-
-                var dividaAberta = dividas.FirstOrDefault(d => !d.Situacao);
-
-                var ultimaDivida = dividas
-                    .OrderByDescending(d => d.DataDeCriacao)
-                    .FirstOrDefault();
-
-                string situacao;
-                string valor;
-                string dataCriacao;
-                string dataPagamento;
-
-                if (dividaAberta != null)
-                {
-                    situacao = "Em aberto";
-                    valor = dividaAberta.Valor.ToString("C2");
-                    dataCriacao = dividaAberta.DataDeCriacao.ToString("dd/MM/yyyy");
-                    dataPagamento = "";
-                }
-                else if (ultimaDivida != null)
-                {
-                    situacao = "Paga";
-                    valor = ultimaDivida.Valor.ToString("C2");
-                    dataCriacao = ultimaDivida.DataDeCriacao.ToString("dd/MM/yyyy");
-                    dataPagamento = ultimaDivida.DataDePagamento?.ToString("dd/MM/yyyy") ?? "";
-                }
-                else
-                {
-                    situacao = "Sem dívida";
-                    valor = "R$ 0,00";
-                    dataCriacao = "";
-                    dataPagamento = "";
-                }
+                string situacao = divida.Situacao ? "Paga" : "Em aberto";
 
                 dataGridView1.Rows.Add(
-                    cliente.Id,
-                    cliente.Nome,
-                    cliente.Cpf,
-                    cliente.Email,
-                    cliente.Idade,
-                    dividas.Count,
-                    valor,
-                    dataCriacao,
-                    dataPagamento,
+                    divida.Id,
+                    divida.IdCliente,
+                    divida.Cliente.Nome,
+                    divida.Cliente.Cpf,
+                    divida.Cliente.Email,
+                    divida.Cliente.Idade,
+                    divida.NomeDaDivida,
+                    divida.Valor.ToString("C2"),
+                    divida.DataDeCriacao.ToString("dd/MM/yyyy"),
+                    divida.DataDePagamento?.ToString("dd/MM/yyyy") ?? "",
                     situacao
                 );
             }
 
             AtualizarTotal();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string pesquisa = txtPesquisa.Text.Trim().ToLower();
+
+            dividas = dividaService.ConsultarNClientes()
+                .Where(d => d.Cliente.Nome.ToLower().Contains(pesquisa))
+                .ToList();
+
+            paginaAtual = 0;
+
+            CarregarDividas();
         }
 
         private void AtualizarTotal()
@@ -122,7 +96,7 @@ namespace Vendinha.Desktop.Screens
                 .Where(d => !d.Situacao)
                 .Sum(d => d.Valor);
 
-            this.Text = $"Consultar Clientes - Total em aberto: {total:C2}";
+            this.Text = $"Consultar Dívidas - Total em aberto: {total:C2}";
         }
 
         private void Anterior_Click(object sender, EventArgs e)
@@ -130,36 +104,42 @@ namespace Vendinha.Desktop.Screens
             if (paginaAtual > 0)
             {
                 paginaAtual--;
-                CarregarDadosTabela(clientes);
+                CarregarDividas();
             }
         }
 
         private void Proximo_Click(object sender, EventArgs e)
         {
-            int totalPaginas = (int)Math.Ceiling((double)clientes.Count / quantidadePorPagina);
+            int totalPaginas = (int)Math.Ceiling(
+                (double)dividas.Count / quantidadePorPagina
+            );
 
             if (paginaAtual < totalPaginas - 1)
             {
                 paginaAtual++;
-                CarregarDadosTabela(clientes);
+                CarregarDividas();
             }
         }
 
-        private void Excluir_Click(object sender, EventArgs e)
+        private void ExcluirCliente_Click(object sender, EventArgs e)
         {
             if (dataGridView1.CurrentRow == null)
             {
-                MessageBox.Show("Selecione um cliente para excluir.");
+                MessageBox.Show("Selecione um cliente.");
                 return;
             }
 
-            int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ID"].Value);
+            int idCliente = Convert.ToInt32(
+                dataGridView1.CurrentRow.Cells["IdCliente"].Value
+            );
 
-            var dividas = dividaService.ConsultarPorCliente(id);
+            var dividasCliente = dividaService.ConsultarPorCliente(idCliente);
 
-            if (dividas.Count > 0)
+            if (dividasCliente.Count > 0)
             {
-                MessageBox.Show("Não é possível excluir um cliente que possui dívidas registradas.");
+                MessageBox.Show(
+                    "Não é possível excluir este cliente, pois ele possui dívidas registradas."
+                );
                 return;
             }
 
@@ -172,7 +152,7 @@ namespace Vendinha.Desktop.Screens
 
             if (resposta == DialogResult.Yes)
             {
-                bool sucesso = clienteService.DeletarCliente(id);
+                bool sucesso = clienteService.DeletarCliente(idCliente);
 
                 if (sucesso)
                 {
@@ -185,7 +165,6 @@ namespace Vendinha.Desktop.Screens
                 }
             }
         }
-
         private void Sair_Click(object sender, EventArgs e)
         {
             this.Close();

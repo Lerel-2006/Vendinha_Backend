@@ -13,6 +13,11 @@ namespace Vendinha.Desktop.Screens
             this.dividaService = dividaService;
 
             InitializeComponent();
+            AtualizarDbox.Click -= AtualizarDbox_Click;
+            AtualizarDbox.Click -= AtualizarDbox_Click;
+            AtualizarDbox.Click += AtualizarDbox_Click;
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -21,8 +26,10 @@ namespace Vendinha.Desktop.Screens
             tela.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void AtualizarDbox_Click(object sender, EventArgs e)
         {
+            AtualizarDivida tela = new AtualizarDivida(dividaService);
+            tela.ShowDialog();
         }
     }
 }

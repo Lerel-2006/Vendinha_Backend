@@ -1,10 +1,11 @@
-﻿using Vendas.Services;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using Vendas.Contexts;
 using Vendas.Models;
-using Vendas.Contexts;  
 
 namespace Vendas.Services
 {
@@ -39,7 +40,8 @@ namespace Vendas.Services
                 return false;
             }
 
-            bool clienteExiste = _context.Clientes.Any(c => c.Id == divida.IdCliente);
+            bool clienteExiste = _context.Clientes
+                .Any(c => c.Id == divida.IdCliente);
 
             if (!clienteExiste)
             {
@@ -51,18 +53,29 @@ namespace Vendas.Services
 
             if (dividaAberta && !divida.Situacao)
             {
-                Console.WriteLine("Este cliente já possui uma divida em aberto");
+                Console.WriteLine("Este cliente já possui uma dívida em aberto.");
                 return false;
             }
 
-            
-
             _context.Dividas.Add(divida);
             _context.SaveChanges();
+
             return true;
         }
 
-        
+        public List<Dividas> ConsultarNClientes()
+        {
+            return _context.Dividas
+                .Include(d => d.Cliente)
+                .ToList();
+        }
+
+        public Dividas? ConsultarPorIdCliente(int id)
+        {
+            return _context.Dividas
+                .Include(d => d.Cliente)
+                .FirstOrDefault(d => d.Id == id);
+        }
 
         public List<Dividas> ConsultarPorCliente(int idCliente)
         {
@@ -73,7 +86,32 @@ namespace Vendas.Services
 
         public Dividas? ConsultarPorId(int id)
         {
-            return _context.Dividas.FirstOrDefault(d => d.Id == id);
+            return _context.Dividas
+                .FirstOrDefault(d => d.Id == id);
+        }
+
+        public bool AtualizarDivida(Dividas divida)
+        {
+            var dividaExistente = ConsultarPorId(divida.Id);
+
+            if (dividaExistente == null)
+            {
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(divida.NomeDaDivida) || divida.Valor <= 0)
+            {
+                return false;
+            }
+
+            dividaExistente.NomeDaDivida = divida.NomeDaDivida;
+            dividaExistente.Valor = divida.Valor;
+            dividaExistente.Situacao = divida.Situacao;
+            dividaExistente.DataDePagamento = divida.DataDePagamento;
+
+            _context.SaveChanges();
+
+            return true;
         }
 
         public bool RegistrarPagamento(int id)
@@ -87,6 +125,7 @@ namespace Vendas.Services
 
             divida.Situacao = true;
             divida.DataDePagamento = DateTime.Now;
+
             _context.SaveChanges();
 
             return true;

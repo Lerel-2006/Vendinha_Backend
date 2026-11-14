@@ -25,6 +25,7 @@ namespace Vendas.Models
 
         [Required]
         public int IdCliente { get; set; }
+        public virtual Cliente Cliente { get; set; }
 
         public Dividas(string nomeDaDivida, decimal valor, bool situacao, DateTime dataDeCriacao, DateTime? dataDePagamento = null)
         {

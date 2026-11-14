@@ -15,7 +15,7 @@ namespace Vendinha.Desktop
         {
             InitializeComponent();
 
-            string conexao = "Host=localhost;Port=5432;Database=vendinha;Username=;Password=root123";
+            string conexao = "Host=localhost;Port=5432;Database=vendinha;Username=postgres;Password=root123";
 
             contexto = new VendinhaDbContext(conexao);
 
@@ -47,6 +47,7 @@ namespace Vendinha.Desktop
 
         private void button3_Click(object sender, EventArgs e)
         {
+
             Atualizar tela = new Atualizar(clienteService, dividaService);
             tela.ShowDialog();
         }

@@ -63,7 +63,8 @@ namespace Vendas.Contexts
 
             //Relacionamento
 
-            entityDivida.HasOne<Cliente>().WithMany()
+            entityDivida.HasOne(d => d.Cliente)
+                .WithMany()
                 .HasForeignKey(d => d.IdCliente);
 
             base.OnModelCreating(modelBuilder);

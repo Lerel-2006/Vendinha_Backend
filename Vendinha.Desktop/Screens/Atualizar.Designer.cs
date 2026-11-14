@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            button2 = new Button();
             button1 = new Button();
+            AtualizarDbox = new Button();
             SuspendLayout();
             // 
             // label1
@@ -43,16 +43,6 @@
             label1.TabIndex = 0;
             label1.Text = "Escolha o que você deseja atualizar";
             // 
-            // button2
-            // 
-            button2.Location = new Point(536, 212);
-            button2.Name = "button2";
-            button2.Size = new Size(140, 63);
-            button2.TabIndex = 2;
-            button2.Text = "Atualizar Dívida";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
             // button1
             // 
             button1.Location = new Point(235, 212);
@@ -62,15 +52,23 @@
             button1.Text = "Atualizar Cliente";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
-
+            // 
+            // AtualizarDbox
+            // 
+            AtualizarDbox.Location = new Point(541, 212);
+            AtualizarDbox.Name = "AtualizarDbox";
+            AtualizarDbox.Size = new Size(152, 63);
+            AtualizarDbox.TabIndex = 4;
+            AtualizarDbox.Text = "Atualizar Dívida";
+            AtualizarDbox.UseVisualStyleBackColor = true;
             // 
             // Atualizar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(951, 487);
+            Controls.Add(AtualizarDbox);
             Controls.Add(button1);
-            Controls.Add(button2);
             Controls.Add(label1);
             Name = "Atualizar";
             Text = "Atualizar";
@@ -81,7 +79,7 @@
         #endregion
 
         private Label label1;
-        private Button button2;
         private Button button1;
+        private Button AtualizarDbox;
     }
 }

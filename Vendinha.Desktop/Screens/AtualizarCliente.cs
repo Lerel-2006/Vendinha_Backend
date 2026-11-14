@@ -70,7 +70,7 @@ namespace Vendinha.Desktop.Screens
                 NomeBox.Text,
                 CPFBox.Text,
                 DataBox.Value.Date,
-                EmailBox.Text
+                string.IsNullOrWhiteSpace(EmailBox.Text) ? null : EmailBox.Text.Trim()
             );
 
             cliente.Id = id;

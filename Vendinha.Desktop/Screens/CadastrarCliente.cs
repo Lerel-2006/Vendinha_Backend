@@ -21,7 +21,7 @@ namespace Vendinha.Desktop.Screens
                 nomeBox.Text,
                 CpfBox.Text,
                 DataBox.Value.Date,
-                EmailBox.Text
+                string.IsNullOrWhiteSpace(EmailBox.Text) ? null : EmailBox.Text.Trim()
 
             );
 

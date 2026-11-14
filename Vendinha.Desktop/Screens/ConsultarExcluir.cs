@@ -24,7 +24,7 @@ namespace Vendinha.Desktop.Screens
             button1.Click += button1_Click;
             Anterior.Click += Anterior_Click;
             Proximo.Click += Proximo_Click;
-            Excluir.Click += Excluir_Click;
+            Excluir.Click += ExcluirCliente;
             Sair.Click += Sair_Click;
 
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -121,7 +121,7 @@ namespace Vendinha.Desktop.Screens
             }
         }
 
-        private void ExcluirCliente_Click(object sender, EventArgs e)
+        private void ExcluirCliente(object sender, EventArgs e)
         {
             if (dataGridView1.CurrentRow == null)
             {
@@ -135,10 +135,13 @@ namespace Vendinha.Desktop.Screens
 
             var dividasCliente = dividaService.ConsultarPorCliente(idCliente);
 
-            if (dividasCliente.Count > 0)
+            // Verifica se existe alguma dívida em aberto
+            bool possuiDividaEmAberto = dividasCliente.Any(d => !d.Situacao);
+
+            if (possuiDividaEmAberto)
             {
                 MessageBox.Show(
-                    "Não é possível excluir este cliente, pois ele possui dívidas registradas."
+                    "Não é possível excluir este cliente, pois ele possui dívidas em aberto."
                 );
                 return;
             }
@@ -165,14 +168,14 @@ namespace Vendinha.Desktop.Screens
                 }
             }
         }
+
         private void Sair_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void ConsultarExcluir_Load(object sender, EventArgs e)
         {
-            CarregarDados();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

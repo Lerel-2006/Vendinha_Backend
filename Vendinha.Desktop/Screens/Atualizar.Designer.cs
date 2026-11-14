@@ -30,7 +30,7 @@
         {
             label1 = new Label();
             button1 = new Button();
-            AtualizarDbox = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -53,21 +53,22 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // AtualizarDbox
+            // button2
             // 
-            AtualizarDbox.Location = new Point(541, 212);
-            AtualizarDbox.Name = "AtualizarDbox";
-            AtualizarDbox.Size = new Size(152, 63);
-            AtualizarDbox.TabIndex = 4;
-            AtualizarDbox.Text = "Atualizar Dívida";
-            AtualizarDbox.UseVisualStyleBackColor = true;
+            button2.Location = new Point(543, 212);
+            button2.Name = "button2";
+            button2.Size = new Size(168, 63);
+            button2.TabIndex = 4;
+            button2.Text = "Atualizar Dívidas";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // Atualizar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(951, 487);
-            Controls.Add(AtualizarDbox);
+            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label1);
             Name = "Atualizar";
@@ -80,6 +81,6 @@
 
         private Label label1;
         private Button button1;
-        private Button AtualizarDbox;
+        private Button button2;
     }
 }

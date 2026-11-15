@@ -31,3 +31,48 @@ alter table dividas
 	add column data_criacao TIMESTAMP not null default CURRENT_TIMESTAMP,
 	add column data_pagamento TIMESTAMP null;
 
+-- mais inserts para testa paginação
+
+insert into clientes (nome, cpf, data_nascimento, email)
+values
+    ('Faye Valentine', '55555555555', '1999-03-15', null),
+    ('Jet Black', '11111111111', '1990-11-15', null),
+    ('Spike Spiegel', '55555555554', '1995-06-26', 'bebop@gmail.com'),
+    ('Binho', '15615615615', '2002-05-20', null),
+    ('Peikoff', '12332112331', '1998-08-12', null),
+    ('Natan', '88899999991', '2001-01-10', null),
+    ('Kurt Kobain', '09875647312', '1967-02-20', 'nirvana@gmail.com'),
+    ('Mike Shinoda', '01928690191', '1977-02-11', null),
+    ('Corey Taylor', '12312312365', '1973-12-08', 'Sulfur@gmail.com'),
+    ('Serj', '34544412344', '1967-08-21', null),
+	('Yeat', '67676767676', '2003-01-01', 'breathe@gmail.com');
+
+
+insert into dividas (id_cliente, nome_divida, valor, paga, data_criacao, data_pagamento)
+values
+    (5, 'Compra de maços de cigarro', 150.00, false, '2026-03-01', null),
+
+    (3, 'Compra de roupas', 75.50, false, '2026-03-15', null),
+
+    (7, 'Corte de cabelo', 230.00, false, '2026-03-19', null),
+
+    (11, 'Compra de mascara', 45.90, false, '2026-03-22', null),
+
+    (4, 'Compra de peças para o monza', 320.00, false, '2026-03-02', null),
+
+    (6, 'Compra de cervejas', 89.90, false, '2026-04-25', null),
+
+    (10, 'Compra de tinta pra cabelo', 120.00, false, '2026-04-08', null),
+
+    (2, 'Compra de alimentos', 55.00, false, '2026-04-28', null),
+
+    (12, 'Compra de instrumentos', 410.50, false, '2026-01-09', null),
+
+    (13, 'Compra de eletrônicos', 99.90, false, '2026-04-01', null);
+
+
+
+select id, nome, cpf
+from clientes;
+
+select * from dividas
